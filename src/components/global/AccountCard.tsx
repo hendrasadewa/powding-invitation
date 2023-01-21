@@ -21,7 +21,7 @@ function AccountCard({ owner, accountNumber, bank, onClick }: Props) {
       className="flex flex-col justify-center rounded-lg shadow hover:shadow-lg focus:shadow-lg"
     >
       <div
-        className="px-2 pt-4 w-96 flex flex-col justify-between gap-4"
+        className="px-2 pt-4 w-72 lg:w-96 flex flex-col justify-between gap-4"
         style={{ color: accentColor }}
       >
         <Image src={logo} width={120} height={200} alt={owner} />

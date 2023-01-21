@@ -18,7 +18,7 @@ export default function SimpleGiftShowcase({ title, label, accounts }: Props) {
         <h2 className="font-cursive text-4xl text-center">{title}</h2>
         <p className="text-center">{label}</p>
       </header>
-      <div className="flex items-center justify-center gap-8">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
         {accounts.map(({ bank, id, number, ownerName }) => (
           <AccountCard
             key={id}
