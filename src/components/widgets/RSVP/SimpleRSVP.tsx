@@ -30,7 +30,7 @@ export default function SimpleRSVP({ title, choices, onSubmit }: Props) {
         </div>
         <form
           onSubmit={handleSubmitChoice}
-          className="flex flex-col gap-4 w-full"
+          className="flex flex-col gap-4 w-full px-4"
         >
           <div className="flex flex-col gap-2 items-center justify-center w-full">
             {choices.map((choice) => (

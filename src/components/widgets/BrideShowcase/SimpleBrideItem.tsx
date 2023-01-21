@@ -16,17 +16,15 @@ export default function SimpleBrideItem({
   socials,
 }: Props) {
   return (
-    <div className="w-full flex flex-col gap-4 items-center justify-center relative">
-      <Image
-        className="rounded-full"
-        src={photoSrc}
-        height={200}
-        width={200}
-        alt={name}
-      />
+    <div className="w-full flex flex-col gap-4 items-center justify-center relative px-4">
+      <div className="avatar">
+        <div className="w-32 lg:w-48 rounded-full">
+          <Image className="rounded-full" src={photoSrc} alt={name} fill />
+        </div>
+      </div>
       <div className="flex flex-col gap-2">
         <p className="text-center text-4xl capitalize font-cursive">{name}</p>
-        <p className="capitalize">{description}</p>
+        <p className="text-center capitalize">{description}</p>
       </div>
       {socials.map(({ id, account, type }) => (
         <SocialTag id={id} account={account} type={type} key={id} />

@@ -14,7 +14,7 @@ export default function SimpleGiftShowcase({ title, label, accounts }: Props) {
 
   return (
     <div className="flex flex-col items-center justify-center gap-8 py-8">
-      <header className="flex flex-col items-center justify-center max-w-lg gap-4">
+      <header className="flex flex-col items-center justify-center max-w-lg gap-4 px-4">
         <h2 className="font-cursive text-4xl text-center">{title}</h2>
         <p className="text-center">{label}</p>
       </header>
