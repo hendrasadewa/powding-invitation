@@ -96,17 +96,28 @@ export interface Gift {
   accounts: BankAccount[];
 }
 
+interface Countdown {
+  id: string;
+  targetDate: Date;
+}
+
+interface Rundown {
+  id: string;
+  events: RundownEvent[];
+}
+
+interface Brides {
+  id: string;
+  husband: Bride;
+  wife: Bride;
+}
+
 export interface Content {
   landing: Event;
   quote: Quote;
-  bride: {
-    husband: Bride;
-    wife: Bride;
-  };
-  countdown: {
-    targetDate: Date;
-  };
-  rundown: RundownEvent[];
+  bride: Brides;
+  countdown: Countdown;
+  rundown: Rundown;
   gallery: Gallery;
   reservations: Reservations;
   gift: Gift;

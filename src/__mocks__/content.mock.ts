@@ -7,9 +7,10 @@ import {
   SOCIAL_ACCOUNT,
   YES_NO_CHOICE,
 } from '@/constants/contents';
+import { AVAILABLE_LAYOUT } from '@/constants/layout';
+
 import { Content } from '@/types/contentTypes';
 import { LayoutConfig } from '@/types/layoutTypes';
-import { AVAILABLE_LAYOUT, AVAILABLE_WIDGETS } from '@/constants/layout';
 
 export const MOCK_CONTENT: Content = {
   landing: {
@@ -25,6 +26,7 @@ export const MOCK_CONTENT: Content = {
     source: 'Ar-rum:21',
   },
   bride: {
+    id: 'dd6de617-ca03-4e50-8e72-9e524c8b54fc',
     husband: {
       id: '65332c46-48e1-4963-a4dc-4af20904e9f7',
       name: 'John Doe',
@@ -53,32 +55,36 @@ export const MOCK_CONTENT: Content = {
     },
   },
   countdown: {
+    id: 'ccf5b9c4-792f-4d5e-8f37-085b0bc2037f',
     targetDate: dayjs().add(30, 'd').toDate(),
   },
-  rundown: [
-    {
-      id: '8b47398d-0cb2-474e-a780-3e94f6441012',
-      name: 'Akad Nikah',
-      dateTimeStart: new Date(),
-      dateTimeEnd: new Date(),
-      locationName: 'Gedung Dewi Sartika',
-      address:
-        'Jalan mawar melati kenanga RT 02 RW 03, Kelurahan Mekar, Kecamatan Subur, Kota Bogor',
-      mapLink: '',
-      logoSrc: '/img/rings.svg',
-    },
-    {
-      id: '2fc9de83-f689-4835-b2f1-e5b7f57509f0',
-      name: 'Resepsi Nikah',
-      dateTimeStart: new Date(),
-      dateTimeEnd: new Date(),
-      locationName: 'Gedung Dewi Sartika',
-      address:
-        'Jalan mawar melati kenanga RT 02 RW 03, Kelurahan Mekar, Kecamatan Subur, Kota Bogor',
-      mapLink: '',
-      logoSrc: '/img/toast.svg',
-    },
-  ],
+  rundown: {
+    id: 'e12c6909-3e49-4adf-a62e-4428171e605f',
+    events: [
+      {
+        id: '8b47398d-0cb2-474e-a780-3e94f6441012',
+        name: 'Akad Nikah',
+        dateTimeStart: new Date(),
+        dateTimeEnd: new Date(),
+        locationName: 'Gedung Dewi Sartika',
+        address:
+          'Jalan mawar melati kenanga RT 02 RW 03, Kelurahan Mekar, Kecamatan Subur, Kota Bogor',
+        mapLink: '',
+        logoSrc: '/img/rings.svg',
+      },
+      {
+        id: '2fc9de83-f689-4835-b2f1-e5b7f57509f0',
+        name: 'Resepsi Nikah',
+        dateTimeStart: new Date(),
+        dateTimeEnd: new Date(),
+        locationName: 'Gedung Dewi Sartika',
+        address:
+          'Jalan mawar melati kenanga RT 02 RW 03, Kelurahan Mekar, Kecamatan Subur, Kota Bogor',
+        mapLink: '',
+        logoSrc: '/img/toast.svg',
+      },
+    ],
+  },
   gallery: {
     id: '7a6a7fb0-79eb-4882-81d0-79039e3d0dd9',
     name: 'Pict of Us',
@@ -154,14 +160,4 @@ export const MOCK_CONTENT: Content = {
 
 export const MOCK_LAYOUT_CONFIG: LayoutConfig = {
   layout: AVAILABLE_LAYOUT.SIMPLE,
-  arrangements: [
-    AVAILABLE_WIDGETS.LANDING,
-    AVAILABLE_WIDGETS.QUOTE,
-    AVAILABLE_WIDGETS.BRIDE,
-    AVAILABLE_WIDGETS.COUNTDOWN,
-    AVAILABLE_WIDGETS.RUNDOWN,
-    AVAILABLE_WIDGETS.GALLERY,
-    AVAILABLE_WIDGETS.RESERVATIONS,
-    AVAILABLE_WIDGETS.GIFT,
-  ],
 };

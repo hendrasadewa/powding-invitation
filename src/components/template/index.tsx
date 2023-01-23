@@ -2,25 +2,20 @@ import { useContext } from 'react';
 
 import { LayoutContext } from '@/components/global/LayoutProvider';
 import { AVAILABLE_LAYOUT } from '@/constants/layout';
-import { Option } from '@/types/contentTypes';
+import { Content } from '@/types/contentTypes';
 
-import SimpleRSVP from './SimpleRSVP';
+import SimpleTemplate from './SimpleTemplate';
 
 interface Props {
-  title: string;
-  choices: Option[];
+  content?: Content;
 }
 
-export default function RSVP({ title, choices }: Props) {
+export default function Template({ content }: Props) {
   const selectedLayout = useContext(LayoutContext);
-
-  const handleSubmit = (value: string) => {};
 
   switch (selectedLayout) {
     case AVAILABLE_LAYOUT.SIMPLE:
-      return (
-        <SimpleRSVP title={title} choices={choices} onSubmit={handleSubmit} />
-      );
+      return <SimpleTemplate content={content} />;
     default:
       return <div>default layout</div>;
   }
