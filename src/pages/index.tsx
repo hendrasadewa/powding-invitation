@@ -1,3 +1,4 @@
+import SEO from '@/components/global/SEO';
 import BrideShowcase from '@/components/widgets/BrideShowcase';
 import Countdown from '@/components/widgets/Countdown';
 import Gift from '@/components/widgets/Gift';
@@ -8,7 +9,6 @@ import Rundown from '@/components/widgets/Rundown';
 import { AVAILABLE_LAYOUT } from '@/constants/theme';
 import { Content } from '@/types/contentTypes';
 import { MOCK_CONTENT } from '@/__mocks__/content.mock';
-import Head from 'next/head';
 
 export default function Home() {
   const content: Content = MOCK_CONTENT;
@@ -16,12 +16,7 @@ export default function Home() {
 
   return (
     <main>
-      <Head>
-        <title>
-          Powdding Invitation : {content.event.name} |{' '}
-          {content.event.eventDate.toString()}
-        </title>
-      </Head>
+      <SEO title={content.event.name} imageSrc={content.event.coverImgSrc} />
       <section id="landing">
         <Landing
           layout={selectedLayout}

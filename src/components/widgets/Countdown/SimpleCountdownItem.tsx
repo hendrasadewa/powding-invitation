@@ -12,7 +12,7 @@ export default function SimpleCountdownItem({ label, value }: Props) {
   return (
     <div className="flex flex-col">
       <span className="countdown text-5xl text-white">
-        <span style={style}></span>
+        <span style={style} />
       </span>
       <span className="text-white">{label}</span>
     </div>
