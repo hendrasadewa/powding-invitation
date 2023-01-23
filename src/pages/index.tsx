@@ -18,13 +18,16 @@ export default function Home() {
 
   return (
     <main>
-      <SEO title={content.event.name} imageSrc={content.event.coverImgSrc} />
+      <SEO
+        title={content.landing.name}
+        imageSrc={content.landing.coverImgSrc}
+      />
       <section id="landing">
         <Landing
           layout={layoutConfig.layout}
-          date={content.event.eventDate}
-          imgSrc={content.event.coverImgSrc}
-          title={content.event.name}
+          date={content.landing.eventDate}
+          imgSrc={content.landing.coverImgSrc}
+          title={content.landing.name}
         />
       </section>
       <section id="quote">
@@ -44,7 +47,7 @@ export default function Home() {
       <section id="countdown">
         <Countdown
           layout={layoutConfig.layout}
-          targetDate={content.event.eventDate}
+          targetDate={content.countdown.targetDate}
         />
       </section>
       <section id="rundown">

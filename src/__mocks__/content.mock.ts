@@ -9,10 +9,10 @@ import {
 } from '@/constants/contents';
 import { Content } from '@/types/contentTypes';
 import { LayoutConfig } from '@/types/layoutTypes';
-import { AVAILABLE_LAYOUT } from '@/constants/layout';
+import { AVAILABLE_LAYOUT, AVAILABLE_WIDGETS } from '@/constants/layout';
 
 export const MOCK_CONTENT: Content = {
-  event: {
+  landing: {
     id: '79248107-5aee-4f83-b1d0-dff143e7dd0f',
     name: 'John & Jane',
     eventDate: dayjs().add(30, 'd').toDate(),
@@ -51,6 +51,9 @@ export const MOCK_CONTENT: Content = {
         },
       ],
     },
+  },
+  countdown: {
+    targetDate: dayjs().add(30, 'd').toDate(),
   },
   rundown: [
     {
@@ -151,4 +154,14 @@ export const MOCK_CONTENT: Content = {
 
 export const MOCK_LAYOUT_CONFIG: LayoutConfig = {
   layout: AVAILABLE_LAYOUT.SIMPLE,
+  arrangements: [
+    AVAILABLE_WIDGETS.LANDING,
+    AVAILABLE_WIDGETS.QUOTE,
+    AVAILABLE_WIDGETS.BRIDE,
+    AVAILABLE_WIDGETS.COUNTDOWN,
+    AVAILABLE_WIDGETS.RUNDOWN,
+    AVAILABLE_WIDGETS.GALLERY,
+    AVAILABLE_WIDGETS.RESERVATIONS,
+    AVAILABLE_WIDGETS.GIFT,
+  ],
 };

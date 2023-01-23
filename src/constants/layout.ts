@@ -3,9 +3,10 @@ export enum AVAILABLE_LAYOUT {
 }
 
 export enum AVAILABLE_WIDGETS {
-  EVENT = 'event',
+  LANDING = 'landing',
   QUOTE = 'quote',
   BRIDE = 'bride',
+  COUNTDOWN = 'countdown',
   RUNDOWN = 'rundown',
   GALLERY = 'gallery',
   RESERVATIONS = 'reservations',

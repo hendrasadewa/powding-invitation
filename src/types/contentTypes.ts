@@ -97,11 +97,14 @@ export interface Gift {
 }
 
 export interface Content {
-  event: Event;
+  landing: Event;
   quote: Quote;
   bride: {
     husband: Bride;
     wife: Bride;
+  };
+  countdown: {
+    targetDate: Date;
   };
   rundown: RundownEvent[];
   gallery: Gallery;
