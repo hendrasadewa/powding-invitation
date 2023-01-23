@@ -1,4 +1,4 @@
-import { AVAILABLE_LAYOUT } from '@/constants/theme';
+import { AVAILABLE_LAYOUT } from '@/constants/layout';
 import { BankAccount } from '@/types/contentTypes';
 import SimpleGiftShowcase from './SimpleGiftShowcase';
 

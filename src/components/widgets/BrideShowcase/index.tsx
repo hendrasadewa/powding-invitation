@@ -1,4 +1,4 @@
-import { AVAILABLE_LAYOUT } from '@/constants/theme';
+import { AVAILABLE_LAYOUT } from '@/constants/layout';
 import { Bride } from '@/types/contentTypes';
 import SimpleBrideShowcase from './SimpleBrideShowcase';
 

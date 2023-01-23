@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 import {
   AVAILABLE_BANK,
   MEDIA_SOURCE,
@@ -5,12 +7,11 @@ import {
   SOCIAL_ACCOUNT,
   YES_NO_CHOICE,
 } from '@/constants/contents';
-import { AVAILABLE_LAYOUT } from '@/constants/theme';
 import { Content } from '@/types/contentTypes';
-import dayjs from 'dayjs';
+import { LayoutConfig } from '@/types/layoutTypes';
+import { AVAILABLE_LAYOUT } from '@/constants/layout';
 
 export const MOCK_CONTENT: Content = {
-  theme: AVAILABLE_LAYOUT.SIMPLE,
   event: {
     id: '79248107-5aee-4f83-b1d0-dff143e7dd0f',
     name: 'John & Jane',
@@ -146,4 +147,8 @@ export const MOCK_CONTENT: Content = {
       },
     ],
   },
+};
+
+export const MOCK_LAYOUT_CONFIG: LayoutConfig = {
+  layout: AVAILABLE_LAYOUT.SIMPLE,
 };

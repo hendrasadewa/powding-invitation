@@ -1,4 +1,4 @@
-import { AVAILABLE_LAYOUT } from '@/constants/theme';
+import { AVAILABLE_LAYOUT } from '@/constants/layout';
 import SimpleQuote from './SimpleQuote';
 
 interface Props {

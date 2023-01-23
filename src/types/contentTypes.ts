@@ -4,7 +4,6 @@ import {
   MEDIA_TYPE,
   SOCIAL_ACCOUNT,
 } from '@/constants/contents';
-import { AVAILABLE_LAYOUT } from '@/constants/theme';
 
 export interface Event {
   id: string;
@@ -98,7 +97,6 @@ export interface Gift {
 }
 
 export interface Content {
-  theme: AVAILABLE_LAYOUT;
   event: Event;
   quote: Quote;
   bride: {

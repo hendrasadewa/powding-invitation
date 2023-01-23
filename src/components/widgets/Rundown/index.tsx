@@ -1,4 +1,4 @@
-import { AVAILABLE_LAYOUT } from '@/constants/theme';
+import { AVAILABLE_LAYOUT } from '@/constants/layout';
 import { RundownEvent } from '@/types/contentTypes';
 import SimpleRundown from './SimpleRundown';
 
