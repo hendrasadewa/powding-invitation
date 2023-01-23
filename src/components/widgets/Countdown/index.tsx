@@ -1,13 +1,18 @@
+import { useContext } from 'react';
+
+import { LayoutContext } from '@/components/global/LayoutProvider';
 import { AVAILABLE_LAYOUT } from '@/constants/layout';
+
 import SimpleCountdown from './SimpleCountdown';
 
 interface Props {
   targetDate: Date;
-  layout: AVAILABLE_LAYOUT;
 }
 
-export default function Countdown({ targetDate, layout }: Props) {
-  switch (layout) {
+export default function Countdown({ targetDate }: Props) {
+  const selectedLayout = useContext(LayoutContext);
+
+  switch (selectedLayout) {
     case AVAILABLE_LAYOUT.SIMPLE:
       return <SimpleCountdown targetDate={targetDate} />;
 
@@ -15,7 +20,3 @@ export default function Countdown({ targetDate, layout }: Props) {
       return <div>default</div>;
   }
 }
-
-Countdown.defaultProps = {
-  layout: AVAILABLE_LAYOUT.SIMPLE,
-};

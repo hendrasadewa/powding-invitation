@@ -1,3 +1,4 @@
+import LayoutProvider from '@/components/global/LayoutProvider';
 import SEO from '@/components/global/SEO';
 import BrideShowcase from '@/components/widgets/BrideShowcase';
 import Countdown from '@/components/widgets/Countdown';
@@ -22,52 +23,47 @@ export default function Home() {
         title={content.landing.name}
         imageSrc={content.landing.coverImgSrc}
       />
-      <section id="landing">
-        <Landing
-          layout={layoutConfig.layout}
-          date={content.landing.eventDate}
-          imgSrc={content.landing.coverImgSrc}
-          title={content.landing.name}
-        />
-      </section>
-      <section id="quote">
-        <Quote
-          layout={layoutConfig.layout}
-          content={content.quote.content}
-          source={content.quote.source}
-        />
-      </section>
-      <section id="bride">
-        <BrideShowcase
-          layout={layoutConfig.layout}
-          husband={content.bride.husband}
-          wife={content.bride.wife}
-        />
-      </section>
-      <section id="countdown">
-        <Countdown
-          layout={layoutConfig.layout}
-          targetDate={content.countdown.targetDate}
-        />
-      </section>
-      <section id="rundown">
-        <Rundown layout={layoutConfig.layout} events={content.rundown} />
-      </section>
-      <section id="reservation">
-        <RSVP
-          layout={layoutConfig.layout}
-          choices={content.reservations.choices}
-          title={content.reservations.title}
-        />
-      </section>
-      <section id="gift">
-        <Gift
-          layout={layoutConfig.layout}
-          accounts={content.gift.accounts}
-          label={content.gift.label}
-          title={content.gift.title}
-        />
-      </section>
+      <LayoutProvider selectedLayout={layoutConfig.layout}>
+        <section id="landing">
+          <Landing
+            date={content.landing.eventDate}
+            imgSrc={content.landing.coverImgSrc}
+            title={content.landing.name}
+          />
+        </section>
+        <section id="quote">
+          <Quote
+            content={content.quote.content}
+            source={content.quote.source}
+          />
+        </section>
+        <section id="bride">
+          <BrideShowcase
+            husband={content.bride.husband}
+            wife={content.bride.wife}
+          />
+        </section>
+        <section id="countdown">
+          <Countdown targetDate={content.countdown.targetDate} />
+        </section>
+        <section id="rundown">
+          <Rundown events={content.rundown} />
+        </section>
+        <section id="reservation">
+          <RSVP
+            layout={layoutConfig.layout}
+            choices={content.reservations.choices}
+            title={content.reservations.title}
+          />
+        </section>
+        <section id="gift">
+          <Gift
+            accounts={content.gift.accounts}
+            label={content.gift.label}
+            title={content.gift.title}
+          />
+        </section>
+      </LayoutProvider>
     </main>
   );
 }

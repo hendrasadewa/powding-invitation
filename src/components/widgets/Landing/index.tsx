@@ -1,15 +1,20 @@
+import { useContext } from 'react';
+
+import { LayoutContext } from '@/components/global/LayoutProvider';
 import { AVAILABLE_LAYOUT } from '@/constants/layout';
+
 import SimpleLanding from './SimpleLanding';
 
 interface Props {
   title: string;
   date: Date;
   imgSrc: string;
-  layout: AVAILABLE_LAYOUT;
 }
 
-export default function Landing({ title, date, imgSrc, layout }: Props) {
-  switch (layout) {
+export default function Landing({ title, date, imgSrc }: Props) {
+  const selectedLayout = useContext(LayoutContext);
+
+  switch (selectedLayout) {
     case AVAILABLE_LAYOUT.SIMPLE:
       return <SimpleLanding title={title} date={date} imgSrc={imgSrc} />;
 
@@ -17,7 +22,3 @@ export default function Landing({ title, date, imgSrc, layout }: Props) {
       return <div>default</div>;
   }
 }
-
-Landing.defaultProps = {
-  layout: AVAILABLE_LAYOUT.SIMPLE,
-};
