@@ -17,7 +17,7 @@ export const MOCK_CONTENT: Content = {
     id: '79248107-5aee-4f83-b1d0-dff143e7dd0f',
     name: 'John & Jane',
     eventDate: dayjs().add(30, 'd').toDate(),
-    coverImgSrc: 'https://picsum.photos/seed/picsum/600/600',
+    coverImgSrc: 'https://api.lorem.space/image/face?w=400&h=400&hash=79248107',
   },
   quote: {
     id: '465cd4e3-3c17-47f5-8560-62d93bf72fc9',
@@ -31,7 +31,8 @@ export const MOCK_CONTENT: Content = {
       id: '65332c46-48e1-4963-a4dc-4af20904e9f7',
       name: 'John Doe',
       description: 'putra dari bapak alex doe dan ibu alexis doe',
-      photoSrc: 'https://picsum.photos/seed/john-doe/600/600',
+      photoSrc:
+        'https://api.lorem.space/image/face?w=400&h=400&hash=4af20904e9f7',
       social: [
         {
           id: 'aaaca24e-0a15-4dbf-995b-792b51b634ef',
@@ -44,7 +45,8 @@ export const MOCK_CONTENT: Content = {
       id: 'a2bb8eed-4d19-460d-99ec-3572bba2daf8',
       name: 'Jane Doe',
       description: 'putri dari bapak robert doe dan ibu roberta doe',
-      photoSrc: 'https://picsum.photos/seed/jane-doe/600/600',
+      photoSrc:
+        'https://api.lorem.space/image/face?w=400&h=400&hash=3572bba2daf8',
       social: [
         {
           id: 'ea08b796-aedc-458d-b43e-45705b9973c8',
@@ -92,28 +94,63 @@ export const MOCK_CONTENT: Content = {
       {
         id: '9aef251e-f42f-40c0-8f22-123f954b8eb7',
         name: 'a',
-        src: 'https://picsum.photos/seed/picsum/600/600',
+        src: 'https://api.lorem.space/image/face?w=400&h=400&hash=9aef251e',
         type: MEDIA_TYPE.IMAGE,
         mediaSource: MEDIA_SOURCE.SELF,
       },
       {
         id: 'ec6e37da-8db8-44f7-9ec9-bb8c53b5a9cc',
         name: 'b',
-        src: 'https://picsum.photos/seed/picsum/600/600',
+        src: 'https://api.lorem.space/image/face?w=400&h=400&hash=ec6e37da',
         type: MEDIA_TYPE.IMAGE,
         mediaSource: MEDIA_SOURCE.SELF,
       },
       {
         id: '04966323-cfa7-49c9-a139-8c23f58be80f',
         name: 'c',
-        src: 'https://picsum.photos/seed/picsum/600/600',
+        src: 'https://api.lorem.space/image/face?w=400&h=400&hash=04966323',
         type: MEDIA_TYPE.IMAGE,
         mediaSource: MEDIA_SOURCE.SELF,
       },
       {
         id: 'fcfe5247-f982-4f54-98ba-d2cb6b8fd77c',
         name: 'd',
-        src: 'https://picsum.photos/seed/picsum/600/600',
+        src: 'https://api.lorem.space/image/face?w=400&h=400&hash=fcfe5247',
+        type: MEDIA_TYPE.IMAGE,
+        mediaSource: MEDIA_SOURCE.SELF,
+      },
+      {
+        id: '8adb86f3-6572-4ec7-bf6e-91a849512595',
+        name: 'e',
+        src: 'https://api.lorem.space/image/face?w=400&h=400&hash=8adb86f3',
+        type: MEDIA_TYPE.IMAGE,
+        mediaSource: MEDIA_SOURCE.SELF,
+      },
+      {
+        id: '0e3eefc3-6f16-4485-8edc-8f92ee40d2e6',
+        name: 'f',
+        src: 'https://api.lorem.space/image/face?w=400&h=400&hash=0e3eefc3',
+        type: MEDIA_TYPE.IMAGE,
+        mediaSource: MEDIA_SOURCE.SELF,
+      },
+      {
+        id: '03b34a87-0172-4829-b684-76e3d82393d1',
+        name: 'g',
+        src: 'https://api.lorem.space/image/face?w=400&h=400&hash=fcfe5247',
+        type: MEDIA_TYPE.IMAGE,
+        mediaSource: MEDIA_SOURCE.SELF,
+      },
+      {
+        id: '33d68f7c-5699-4322-bac2-e8ac9e9b974a',
+        name: 'h',
+        src: 'https://api.lorem.space/image/face?w=400&h=400&hash=8adb86f3',
+        type: MEDIA_TYPE.IMAGE,
+        mediaSource: MEDIA_SOURCE.SELF,
+      },
+      {
+        id: '06fed1cb-61c8-4265-8266-3519002d5044',
+        name: 'i',
+        src: 'https://api.lorem.space/image/face?w=400&h=400&hash=0e3eefc3',
         type: MEDIA_TYPE.IMAGE,
         mediaSource: MEDIA_SOURCE.SELF,
       },
